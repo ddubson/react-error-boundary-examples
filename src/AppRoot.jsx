@@ -1,9 +1,13 @@
 import React, {PureComponent} from "react";
+import {AppErrorBoundary} from "./AppErrorBoundary";
+import {SimpleErrorThrower} from "./SimpleErrorThrower";
 
 export class AppRoot extends PureComponent {
     render() {
         return (
-            <div>Hello World!</div>
+            <AppErrorBoundary>
+                <SimpleErrorThrower />
+            </AppErrorBoundary>
         )
     }
 }
